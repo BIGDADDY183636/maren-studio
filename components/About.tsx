@@ -1,67 +1,62 @@
 export default function About() {
   return (
-    <section id="about" className="py-28 bg-cream">
-      <div className="max-w-5xl mx-auto px-8">
-        <p className="font-sans font-light text-[0.6rem] tracking-[0.38em] uppercase text-gold mb-20">
-          About
+    <section id="about" className="py-24 bg-cream">
+      <div className="max-w-5xl mx-auto px-6">
+        <p className="font-sans text-[0.7rem] font-medium tracking-[0.2em] uppercase text-terra mb-14">
+          about
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-[5fr_7fr] gap-14 md:gap-20 items-start">
-          {/* Portrait placeholder */}
+        <div className="grid grid-cols-1 md:grid-cols-[5fr_7fr] gap-12 md:gap-20 items-start">
+          {/* Portrait placeholder — terracotta-toned */}
           <div>
             <div
-              className="w-full rounded-[3px]"
+              className="w-full rounded-lg"
               style={{
                 aspectRatio: "3 / 4",
                 background:
-                  "linear-gradient(155deg, #b8924a 0%, #a47e3a 45%, #7a5e22 100%)",
+                  "linear-gradient(160deg, #d97a52 0%, #c4633a 50%, #7a3a1c 100%)",
               }}
             />
-            <p className="mt-4 font-sans font-light text-[0.55rem] tracking-[0.22em] uppercase text-ink/28 text-center">
+            <p className="mt-3 font-sans text-[0.58rem] tracking-[0.18em] uppercase text-ink/25 text-center">
               — portrait —
             </p>
           </div>
 
           {/* Bio */}
-          <div className="md:pt-3">
+          <div>
             <h2
-              className="font-serif font-normal text-ink-true leading-none mb-10"
-              style={{ fontSize: "clamp(2.4rem, 4.5vw, 3.4rem)" }}
+              className="font-serif text-ink leading-tight mb-8"
+              style={{
+                fontSize: "clamp(2.2rem, 4vw, 3.2rem)",
+                fontVariationSettings: '"opsz" 36, "WONK" 0.5',
+              }}
             >
-              Maren
+              Hey, I&apos;m Maren.
             </h2>
 
-            <div className="space-y-6 font-serif text-[1.06rem] leading-[1.75] text-ink-soft">
+            <div className="space-y-5 font-sans text-[0.95rem] leading-[1.8] text-ink/70">
               <p>
-                <span
-                  className="float-left font-serif font-semibold text-gold leading-[0.78] mr-2 select-none"
-                  style={{ fontSize: "clamp(3.2rem, 5vw, 4rem)", marginTop: "0.05em" }}
-                >
-                  I
+                I cut hair on the North Side. Trained in Chicago, spent three
+                years in LA, came back for the pizza (and the people, but mostly
+                the pizza). I&apos;ve been in Lincoln Square for four years now
+                and it still feels like a neighborhood, which is the whole point.
+              </p>
+              <p>
+                I take a small number of clients each week so we actually have
+                time to talk. No rushing, no double-booking, no one hollering
+                from the next station. Just good music, a good cut, and you
+                leaving with hair you like.
+              </p>
+              <p>
+                New clients come in through the waitlist or a referral. If
+                someone sent you, great — that&apos;s how I like to meet people.
+                If not, fill out the form and I&apos;ll reach out when there&apos;s
+                a good fit.{" "}
+                <span className="font-script text-terra text-[1.05rem]" style={{ fontStyle: "normal" }}>
+                  (ask me about my dog)
                 </span>
-                trained at the Atelier Renault in Paris — a small, old school
-                where you cut hair on real people from your second week. No
-                mannequins, no hand-holding. It ruined me for shortcuts. I came
-                to Chicago eight years ago for a person, stayed for the city, and
-                eventually opened this studio in Lincoln Square because the light
-                here is good and the neighborhood still feels like a neighborhood.
-              </p>
-              <p>
-                I take a small number of clients each week so every appointment
-                feels unrushed. There&apos;s no front desk, no receptionist, no
-                other stylists moving around behind you. It&apos;s just us, a
-                good playlist, and enough time to get it right. Color is my
-                favorite. Blowouts are my meditation.
-              </p>
-              <p>
-                New clients come in by referral or waitlist. If you found me
-                through someone whose hair you love, that&apos;s usually how it
-                works. If you didn&apos;t, the waitlist form is worth filling
-                out — I move people through when the fit feels right.
               </p>
             </div>
-
-            <div className="mt-10 w-10 h-px bg-gold opacity-50" />
           </div>
         </div>
       </div>

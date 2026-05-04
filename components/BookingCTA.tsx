@@ -1,27 +1,31 @@
 export default function BookingCTA() {
   return (
-    <section id="book" className="py-32 bg-ink-true">
-      <div className="max-w-3xl mx-auto px-8 text-center">
-        <p className="font-sans font-light text-[0.6rem] tracking-[0.38em] uppercase text-gold mb-7">
-          Appointments
+    <section id="book" className="py-28 bg-ink">
+      <div className="max-w-3xl mx-auto px-6 text-center">
+        <p className="font-sans text-[0.7rem] font-medium tracking-[0.2em] uppercase text-terra mb-6">
+          appointments
         </p>
         <h2
-          className="font-serif font-normal text-cream leading-[1.08] mb-7"
-          style={{ fontSize: "clamp(2.4rem, 5vw, 3.6rem)" }}
+          className="font-serif text-cream leading-tight mb-6"
+          style={{
+            fontSize: "clamp(2.4rem, 5.5vw, 4rem)",
+            fontVariationSettings: '"opsz" 48, "WONK" 0.6',
+          }}
         >
-          New clients welcome
+          Need a{" "}
+          <span className="text-terra">chair?</span>
           <br />
-          by waitlist.
+          Get on the list.
         </h2>
-        <p className="font-serif italic text-[1.05rem] text-cream/48 leading-[1.75] max-w-sm mx-auto mb-14">
-          I typically respond within a few days. If the timing and the work feel
-          like a good match, we&apos;ll set up a first appointment.
+        <p className="font-sans text-[0.92rem] text-cream/45 leading-relaxed max-w-xs mx-auto mb-12">
+          I&apos;ll reach out when there&apos;s a slot that makes sense. Usually
+          within a few days.
         </p>
         <a
           href="mailto:hello@marenstudio.com"
-          className="inline-block font-sans font-light text-[0.68rem] tracking-[0.22em] uppercase bg-gold text-cream px-11 py-4 rounded-full hover:bg-gold-light transition-colors duration-300"
+          className="inline-flex items-center gap-2 font-sans text-[0.82rem] font-medium bg-terra text-cream px-8 py-3.5 rounded-full hover:bg-terra-deep transition-colors duration-200 tracking-wide"
         >
-          Request an appointment
+          Reach out →
         </a>
       </div>
     </section>

@@ -1,72 +1,60 @@
 const hours = [
-  { day: "Tuesday – Saturday", time: "10 am – 6 pm" },
-  { day: "Sunday – Monday", time: "Closed" },
+  { day: "tues – sat", time: "10 – 6" },
+  { day: "sun + mon", time: "closed" },
 ];
 
 function FakeMap() {
   return (
-    <div className="w-full h-full min-h-[280px] rounded-[3px] overflow-hidden border border-gold/[0.25]">
+    <div className="w-full h-full min-h-[280px] rounded-lg overflow-hidden border border-terra/15">
       <svg
         viewBox="0 0 400 300"
         className="w-full h-full"
         aria-label="Map showing Maren Studio at 4844 N Lincoln Ave, Chicago"
       >
         {/* Road base */}
-        <rect width="400" height="300" fill="#f5f0e8" />
+        <rect width="400" height="300" fill="#f5efe6" />
 
-        {/* City blocks — 4 rows × 4 columns */}
+        {/* City blocks */}
         {/* Row 0 */}
-        <rect x="0"   y="0"   width="82"  height="68" fill="#ece4d8" />
-        <rect x="96"  y="0"   width="82"  height="68" fill="#ece4d8" />
-        <rect x="192" y="0"   width="82"  height="68" fill="#ece4d8" />
-        <rect x="288" y="0"   width="112" height="68" fill="#ece4d8" />
-
+        <rect x="0"   y="0"   width="82"  height="68" fill="#ede4d8" />
+        <rect x="96"  y="0"   width="82"  height="68" fill="#ede4d8" />
+        <rect x="192" y="0"   width="82"  height="68" fill="#ede4d8" />
+        <rect x="288" y="0"   width="112" height="68" fill="#ede4d8" />
         {/* Row 1 */}
-        <rect x="0"   y="80"  width="82"  height="64" fill="#ece4d8" />
-        <rect x="96"  y="80"  width="82"  height="64" fill="#ece4d8" />
-        <rect x="192" y="80"  width="82"  height="64" fill="#ece4d8" />
-        <rect x="288" y="80"  width="112" height="64" fill="#ece4d8" />
-
+        <rect x="0"   y="80"  width="82"  height="64" fill="#ede4d8" />
+        <rect x="96"  y="80"  width="82"  height="64" fill="#ede4d8" />
+        <rect x="192" y="80"  width="82"  height="64" fill="#ede4d8" />
+        <rect x="288" y="80"  width="112" height="64" fill="#ede4d8" />
         {/* Row 2 */}
-        <rect x="0"   y="156" width="82"  height="64" fill="#ece4d8" />
-        <rect x="96"  y="156" width="82"  height="64" fill="#ece4d8" />
-        <rect x="192" y="156" width="82"  height="64" fill="#ece4d8" />
-        <rect x="288" y="156" width="112" height="64" fill="#ece4d8" />
-
+        <rect x="0"   y="156" width="82"  height="64" fill="#ede4d8" />
+        <rect x="96"  y="156" width="82"  height="64" fill="#ede4d8" />
+        <rect x="192" y="156" width="82"  height="64" fill="#ede4d8" />
+        <rect x="288" y="156" width="112" height="64" fill="#ede4d8" />
         {/* Row 3 */}
-        <rect x="0"   y="232" width="82"  height="68" fill="#ece4d8" />
-        <rect x="96"  y="232" width="82"  height="68" fill="#ece4d8" />
-        <rect x="192" y="232" width="82"  height="68" fill="#ece4d8" />
-        <rect x="288" y="232" width="112" height="68" fill="#ece4d8" />
+        <rect x="0"   y="232" width="82"  height="68" fill="#ede4d8" />
+        <rect x="96"  y="232" width="82"  height="68" fill="#ede4d8" />
+        <rect x="192" y="232" width="82"  height="68" fill="#ede4d8" />
+        <rect x="288" y="232" width="112" height="68" fill="#ede4d8" />
 
-        {/* Lincoln Ave — diagonal road */}
-        <line x1="10"  y1="300" x2="390" y2="0"  stroke="#f5f0e8" strokeWidth="16" />
-        <line x1="10"  y1="300" x2="390" y2="0"  stroke="#a47e3a" strokeWidth="0.8" opacity="0.22" />
+        {/* Lincoln Ave diagonal */}
+        <line x1="10" y1="300" x2="390" y2="0" stroke="#f5efe6" strokeWidth="16" />
+        <line x1="10" y1="300" x2="390" y2="0" stroke="#c4633a" strokeWidth="0.8" opacity="0.2" />
 
         {/* Street labels */}
-        <text x="4" y="77"  fontSize="5" fill="#9a8a72" fontFamily="system-ui, sans-serif" letterSpacing="0.06em">LELAND AVE</text>
-        <text x="4" y="153" fontSize="5" fill="#9a8a72" fontFamily="system-ui, sans-serif" letterSpacing="0.06em">GUNNISON ST</text>
-        <text x="4" y="229" fontSize="5" fill="#9a8a72" fontFamily="system-ui, sans-serif" letterSpacing="0.06em">CARMEN AVE</text>
-        <text x="92"  y="295" fontSize="5" fill="#9a8a72" fontFamily="system-ui, sans-serif" letterSpacing="0.06em" textAnchor="middle">WESTERN AVE</text>
-        <text x="188" y="295" fontSize="5" fill="#9a8a72" fontFamily="system-ui, sans-serif" letterSpacing="0.06em" textAnchor="middle">DAMEN AVE</text>
-        <text
-          x="305" y="58" fontSize="5" fill="#9a8a72"
-          fontFamily="system-ui, sans-serif" letterSpacing="0.06em"
-          transform="rotate(-36, 305, 58)"
-        >
-          LINCOLN AVE
-        </text>
+        <text x="4" y="77"  fontSize="5" fill="#9a8a76" fontFamily="system-ui" letterSpacing="0.06em">LELAND AVE</text>
+        <text x="4" y="153" fontSize="5" fill="#9a8a76" fontFamily="system-ui" letterSpacing="0.06em">GUNNISON ST</text>
+        <text x="4" y="229" fontSize="5" fill="#9a8a76" fontFamily="system-ui" letterSpacing="0.06em">CARMEN AVE</text>
+        <text x="92"  y="295" fontSize="5" fill="#9a8a76" fontFamily="system-ui" letterSpacing="0.06em" textAnchor="middle">WESTERN AVE</text>
+        <text x="188" y="295" fontSize="5" fill="#9a8a76" fontFamily="system-ui" letterSpacing="0.06em" textAnchor="middle">DAMEN AVE</text>
+        <text x="305" y="58" fontSize="5" fill="#9a8a76" fontFamily="system-ui" letterSpacing="0.06em" transform="rotate(-36, 305, 58)">LINCOLN AVE</text>
 
-        {/* Pulse ring + pin */}
-        <circle cx="196" cy="153" r="6" fill="#a47e3a" opacity="0.28" className="pulse-ring" />
-        <circle cx="196" cy="153" r="4" fill="#a47e3a" />
+        {/* Sage pin — the one sage moment */}
+        <circle cx="196" cy="153" r="6" fill="#8a9978" opacity="0.3" className="pulse-ring" />
+        <circle cx="196" cy="153" r="4" fill="#8a9978" />
 
         {/* Address callout */}
-        <rect x="206" y="142" width="94" height="17" rx="2.5" fill="#f0eae0" opacity="0.92" />
-        <text
-          x="253" y="153.5" fontSize="5.8" fill="#0a0907"
-          fontFamily="system-ui, sans-serif" textAnchor="middle" letterSpacing="0.03em"
-        >
+        <rect x="206" y="142" width="94" height="17" rx="2.5" fill="#f5efe6" opacity="0.93" />
+        <text x="253" y="153.5" fontSize="5.8" fill="#1a1614" fontFamily="system-ui" textAnchor="middle" letterSpacing="0.03em">
           4844 N Lincoln Ave
         </text>
       </svg>
@@ -76,68 +64,80 @@ function FakeMap() {
 
 export default function Visit() {
   return (
-    <section id="visit" className="py-28 bg-cream-deep">
-      <div className="max-w-5xl mx-auto px-8">
-        <p className="font-sans font-light text-[0.6rem] tracking-[0.38em] uppercase text-gold mb-20">
-          Visit
+    <section id="visit" className="py-24 bg-cream">
+      <div className="max-w-5xl mx-auto px-6">
+        <p className="font-sans text-[0.7rem] font-medium tracking-[0.2em] uppercase text-terra mb-14">
+          come hang
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-          {/* Left: info */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
+          {/* Left */}
           <div>
             <h2
-              className="font-serif font-normal text-ink-true leading-none mb-14"
-              style={{ fontSize: "clamp(2.4rem, 4.5vw, 3.2rem)" }}
+              className="font-serif text-ink leading-tight mb-10"
+              style={{
+                fontSize: "clamp(2.2rem, 4.5vw, 3.2rem)",
+                fontVariationSettings: '"opsz" 36, "WONK" 0.4',
+              }}
             >
-              Come in.
+              Come by.
             </h2>
 
             {/* Hours */}
-            <div className="mb-10">
-              <p className="font-sans font-light text-[0.58rem] tracking-[0.24em] uppercase text-gold mb-3">
-                Hours
+            <div className="mb-8">
+              <p className="font-sans text-[0.65rem] font-medium tracking-[0.18em] uppercase text-terra/80 mb-3">
+                hours
               </p>
-              <p className="font-serif italic text-sm text-ink/45 mb-4">
-                By appointment only.
-              </p>
-              <div className="space-y-2.5">
+              <div className="space-y-2">
                 {hours.map((h) => (
-                  <div key={h.day} className="flex items-baseline justify-between gap-4">
-                    <span className="font-serif text-ink text-[1rem]">{h.day}</span>
-                    <span className="font-sans font-light text-[0.82rem] text-ink-soft whitespace-nowrap">
-                      {h.time}
-                    </span>
+                  <div key={h.day} className="flex justify-between items-baseline">
+                    <span className="font-sans text-[0.95rem] text-ink/75">{h.day}</span>
+                    <span className="font-sans text-[0.88rem] font-medium text-ink/55">{h.time}</span>
                   </div>
                 ))}
               </div>
+              <p className="font-sans text-[0.78rem] text-ink/40 mt-2 italic">
+                by appointment, plus chill walk-ins on slow days
+              </p>
             </div>
 
             {/* Address */}
-            <div className="mb-9">
-              <p className="font-sans font-light text-[0.58rem] tracking-[0.24em] uppercase text-gold mb-3">
-                Address
+            <div className="mb-8">
+              <p className="font-sans text-[0.65rem] font-medium tracking-[0.18em] uppercase text-terra/80 mb-3">
+                address
               </p>
-              <p className="font-serif text-ink leading-relaxed">
+              <p className="font-sans text-[0.95rem] text-ink/75 leading-relaxed">
                 4844 N Lincoln Ave
                 <br />
                 Chicago, IL 60625
               </p>
-              <p className="font-sans font-light text-[0.7rem] text-ink/38 mt-1 tracking-wide">
-                Lincoln Square
-              </p>
+              <p className="font-sans text-[0.75rem] text-ink/35 mt-1">Lincoln Square</p>
             </div>
 
             {/* Instagram */}
-            <div>
-              <p className="font-sans font-light text-[0.58rem] tracking-[0.24em] uppercase text-gold mb-3">
-                Instagram
+            <div className="mb-10">
+              <p className="font-sans text-[0.65rem] font-medium tracking-[0.18em] uppercase text-terra/80 mb-2">
+                instagram
               </p>
-              <p className="font-serif italic text-ink">@marenstudio</p>
+              <p className="font-sans text-[0.95rem] text-ink/75">@maren.studio</p>
+            </div>
+
+            {/* Now playing */}
+            <div className="inline-flex items-start gap-3 bg-cream-warm px-5 py-4 rounded-xl">
+              <span className="text-terra text-base mt-0.5 leading-none select-none">♪</span>
+              <div>
+                <p className="font-sans text-[0.6rem] font-medium tracking-[0.15em] uppercase text-ink/35 mb-1">
+                  now playing
+                </p>
+                <p className="font-sans text-[0.88rem] text-ink/70 font-medium">
+                  &ldquo;Spinning&rdquo; — Yves Tumor
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Right: map */}
-          <div className="h-80 md:h-auto md:min-h-[340px]">
+          <div className="h-80 md:h-auto md:min-h-[360px]">
             <FakeMap />
           </div>
         </div>

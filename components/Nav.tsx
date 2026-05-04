@@ -2,7 +2,11 @@
 
 import { useState, useEffect } from "react";
 
-const links = ["Services", "About", "Visit"] as const;
+const navLinks = [
+  { label: "services", href: "#services" },
+  { label: "about", href: "#about" },
+  { label: "visit", href: "#visit" },
+];
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -15,35 +19,38 @@ export default function Nav() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
         scrolled
-          ? "bg-cream/95 backdrop-blur-md border-b border-gold/10 shadow-[0_1px_12px_rgba(26,24,20,0.04)]"
+          ? "bg-cream/95 backdrop-blur-md border-b border-terra/10"
           : "bg-transparent"
       }`}
     >
-      <nav className="max-w-6xl mx-auto px-8 py-5 flex items-center justify-between">
+      <nav className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+        {/* Wordmark */}
         <a
           href="#"
-          className="font-serif font-light text-[1.65rem] tracking-wide text-ink leading-none select-none"
+          className="font-serif text-terra text-[1.4rem] tracking-tight leading-none"
+          style={{ fontVariationSettings: '"opsz" 24, "WONK" 0.5' }}
         >
-          Maren
+          maren
         </a>
 
-        <div className="hidden md:flex items-center gap-10">
-          {links.map((label) => (
+        {/* Links + CTA */}
+        <div className="hidden md:flex items-center gap-7">
+          {navLinks.map(({ label, href }) => (
             <a
               key={label}
-              href={`#${label.toLowerCase()}`}
-              className="font-sans font-light text-[0.64rem] tracking-[0.22em] uppercase text-ink-soft hover:text-gold transition-colors duration-200"
+              href={href}
+              className="font-sans text-[0.75rem] font-medium text-ink/60 hover:text-terra transition-colors duration-200 tracking-wide"
             >
               {label}
             </a>
           ))}
           <a
             href="#book"
-            className="font-sans font-light text-[0.64rem] tracking-[0.16em] uppercase bg-gold text-cream px-5 py-2.5 rounded-full hover:bg-gold-light transition-colors duration-200"
+            className="font-sans text-[0.72rem] font-medium bg-terra text-cream px-4 py-2 rounded-full hover:bg-terra-deep transition-colors duration-200 tracking-wide"
           >
-            Book
+            book a chair
           </a>
         </div>
       </nav>

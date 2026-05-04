@@ -1,26 +1,32 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Fraunces, DM_Sans, Caveat } from "next/font/google";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
+  axes: ["opsz", "WONK"],
+  variable: "--font-fraunces",
   display: "swap",
 });
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
-  variable: "--font-inter",
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-caveat",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Maren Studio — Hair · Lincoln Square, Chicago",
   description:
-    "Cuts, color, and slow afternoons. Independent hair stylist in Lincoln Square, Chicago. By appointment.",
+    "Hair, color, conversations. Independent stylist in Lincoln Square, Chicago. By appointment.",
 };
 
 export default function RootLayout({
@@ -29,7 +35,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
+    <html
+      lang="en"
+      className={`${fraunces.variable} ${dmSans.variable} ${caveat.variable}`}
+    >
       <body className="font-sans antialiased">{children}</body>
     </html>
   );

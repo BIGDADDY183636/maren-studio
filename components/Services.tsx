@@ -1,102 +1,78 @@
-type Item = { name: string; price: string };
-type Section = { heading: string; items: Item[] };
-
-const pricing: Section[] = [
+const services = [
   {
-    heading: "Cuts",
-    items: [
-      { name: "Haircut, dry styling included", price: "from $65" },
-      { name: "Cut + blowout", price: "from $85" },
-      { name: "Long hair, cut + style", price: "from $95" },
-    ],
+    name: "Cuts",
+    desc: "a real cut, not a 15-minute trim. dry styling always included.",
+    price: "from $65",
   },
   {
-    heading: "Color",
-    items: [
-      { name: "Single process color", price: "from $120" },
-      { name: "Double process", price: "from $185" },
-      { name: "Color + cut", price: "from $195" },
-      { name: "Color correction", price: "from $220" },
-    ],
+    name: "Color",
+    desc: "single process, double process, corrections. i'll tell you what i actually think.",
+    price: "from $120",
   },
   {
-    heading: "Balayage & Highlights",
-    items: [
-      { name: "Partial balayage", price: "from $180" },
-      { name: "Full balayage", price: "from $220" },
-      { name: "Full highlights", price: "from $210" },
-      { name: "Balayage + cut + toner", price: "from $260" },
-    ],
+    name: "Balayage & Highlights",
+    desc: "lived-in color that doesn't need a salon every 6 weeks.",
+    price: "from $180",
   },
   {
-    heading: "Blowouts",
-    items: [
-      { name: "Blowout", price: "$55" },
-      { name: "Blowout, iron finish", price: "$65" },
-    ],
+    name: "Blowouts",
+    desc: "a good blowout is genuinely one of life's pleasures.",
+    price: "$55",
   },
   {
-    heading: "Bridal & Events",
-    items: [
-      { name: "Bridal hair", price: "by consultation" },
-      { name: "Event styling", price: "by consultation" },
-    ],
+    name: "Bridal & Events",
+    desc: "weddings, bridesmaid days, that fancy dinner. dm me first.",
+    price: "let's talk",
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="py-28 bg-cream-deep">
-      <div className="max-w-3xl mx-auto px-8">
+    <section id="services" className="py-24 bg-cream-warm">
+      <div className="max-w-3xl mx-auto px-6">
         {/* Header */}
-        <div className="mb-20">
-          <p className="font-sans font-light text-[0.6rem] tracking-[0.38em] uppercase text-gold mb-5">
-            Services
+        <div className="mb-14">
+          <p className="font-sans text-[0.7rem] font-medium tracking-[0.2em] uppercase text-terra mb-4">
+            what i do
           </p>
           <h2
-            className="font-serif font-normal text-ink-true leading-none"
-            style={{ fontSize: "clamp(2.6rem, 5vw, 3.8rem)" }}
+            className="font-serif text-ink leading-tight"
+            style={{
+              fontSize: "clamp(2.4rem, 5vw, 3.6rem)",
+              fontVariationSettings: '"opsz" 36, "WONK" 0.4',
+            }}
           >
-            Pricing
+            The services.
           </h2>
+          <p className="font-sans text-[0.95rem] text-ink/55 mt-4 max-w-sm leading-relaxed">
+            Pricing is honest. No upsells, no surprise add-ons, no pressure.
+          </p>
         </div>
 
-        {/* Price list */}
-        <div className="space-y-14">
-          {pricing.map((section) => (
-            <div key={section.heading}>
-              <h3 className="font-serif italic text-gold text-xl mb-6 pb-3 border-b border-gold/25">
-                {section.heading}
-              </h3>
-
-              <div className="space-y-3.5">
-                {section.items.map((item) => (
-                  <div key={item.name} className="flex items-baseline gap-2">
-                    {/* Service name: light italic serif */}
-                    <span className="font-serif font-light italic text-ink text-[1.05rem] shrink-0">
-                      {item.name}
-                    </span>
-                    {/* Refined leader dots */}
-                    <span
-                      className="flex-1 min-w-[1rem]"
-                      style={{
-                        borderBottom: "1px dotted rgba(10,9,7,0.28)",
-                        marginBottom: "3px",
-                      }}
-                    />
-                    {/* Price: semibold, true black — asymmetry is the editorial move */}
-                    <span className="font-sans font-semibold text-[0.8rem] text-ink-true whitespace-nowrap tracking-wide">
-                      {item.price}
-                    </span>
-                  </div>
-                ))}
+        {/* Service rows */}
+        <div className="divide-y divide-ink/8">
+          {services.map((s) => (
+            <div key={s.name} className="py-6 flex items-start justify-between gap-6">
+              <div className="flex-1">
+                <h3
+                  className="font-serif text-ink text-[1.35rem] leading-tight"
+                  style={{ fontVariationSettings: '"opsz" 20, "WONK" 0.2' }}
+                >
+                  {s.name}
+                </h3>
+                <p className="font-sans text-[0.82rem] text-ink/50 mt-1 leading-relaxed">
+                  {s.desc}
+                </p>
               </div>
+              <span className="font-sans font-bold text-[0.88rem] text-terra whitespace-nowrap pt-0.5">
+                {s.price}
+              </span>
             </div>
           ))}
         </div>
 
-        <p className="mt-16 font-serif italic text-sm text-ink/45">
-          Pricing starts at; final quote given in person.
+        <p className="mt-10 font-sans text-[0.78rem] text-ink/40 italic">
+          Final quote in person. Deposit required to hold your spot.
         </p>
       </div>
     </section>
