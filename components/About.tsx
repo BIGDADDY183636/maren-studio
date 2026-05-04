@@ -14,7 +14,7 @@ export default function About() {
               style={{
                 aspectRatio: "3 / 4",
                 background:
-                  "linear-gradient(155deg, #c9a96a 0%, #b8924a 45%, #96762e 100%)",
+                  "linear-gradient(155deg, #b8924a 0%, #a47e3a 45%, #7a5e22 100%)",
               }}
             />
             <p className="mt-4 font-sans font-light text-[0.55rem] tracking-[0.22em] uppercase text-ink/28 text-center">
@@ -25,7 +25,7 @@ export default function About() {
           {/* Bio */}
           <div className="md:pt-3">
             <h2
-              className="font-serif font-light text-ink leading-none mb-10"
+              className="font-serif font-normal text-ink-true leading-none mb-10"
               style={{ fontSize: "clamp(2.4rem, 4.5vw, 3.4rem)" }}
             >
               Maren
@@ -33,7 +33,13 @@ export default function About() {
 
             <div className="space-y-6 font-serif text-[1.06rem] leading-[1.75] text-ink-soft">
               <p>
-                I trained at the Atelier Renault in Paris — a small, old school
+                <span
+                  className="float-left font-serif font-semibold text-gold leading-[0.78] mr-2 select-none"
+                  style={{ fontSize: "clamp(3.2rem, 5vw, 4rem)", marginTop: "0.05em" }}
+                >
+                  I
+                </span>
+                trained at the Atelier Renault in Paris — a small, old school
                 where you cut hair on real people from your second week. No
                 mannequins, no hand-holding. It ruined me for shortcuts. I came
                 to Chicago eight years ago for a person, stayed for the city, and
@@ -55,7 +61,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="mt-10 w-10 h-px bg-gold opacity-40" />
+            <div className="mt-10 w-10 h-px bg-gold opacity-50" />
           </div>
         </div>
       </div>

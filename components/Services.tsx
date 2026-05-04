@@ -54,36 +54,38 @@ export default function Services() {
             Services
           </p>
           <h2
-            className="font-serif font-light text-ink leading-none"
+            className="font-serif font-normal text-ink-true leading-none"
             style={{ fontSize: "clamp(2.6rem, 5vw, 3.8rem)" }}
           >
             Pricing
           </h2>
         </div>
 
-        {/* Price list sections */}
+        {/* Price list */}
         <div className="space-y-14">
           {pricing.map((section) => (
             <div key={section.heading}>
-              <h3 className="font-serif italic text-gold text-xl mb-6 pb-3 border-b border-gold/20">
+              <h3 className="font-serif italic text-gold text-xl mb-6 pb-3 border-b border-gold/25">
                 {section.heading}
               </h3>
 
               <div className="space-y-3.5">
                 {section.items.map((item) => (
                   <div key={item.name} className="flex items-baseline gap-2">
-                    <span className="font-serif italic text-ink text-[1.05rem] shrink-0">
+                    {/* Service name: light italic serif */}
+                    <span className="font-serif font-light italic text-ink text-[1.05rem] shrink-0">
                       {item.name}
                     </span>
-                    {/* Leader dots */}
+                    {/* Refined leader dots */}
                     <span
                       className="flex-1 min-w-[1rem]"
                       style={{
-                        borderBottom: "1px dotted rgba(26,24,20,0.18)",
+                        borderBottom: "1px dotted rgba(10,9,7,0.28)",
                         marginBottom: "3px",
                       }}
                     />
-                    <span className="font-sans font-light text-[0.82rem] text-ink-soft whitespace-nowrap tracking-wide">
+                    {/* Price: semibold, true black — asymmetry is the editorial move */}
+                    <span className="font-sans font-semibold text-[0.8rem] text-ink-true whitespace-nowrap tracking-wide">
                       {item.price}
                     </span>
                   </div>

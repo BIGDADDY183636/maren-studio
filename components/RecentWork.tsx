@@ -1,10 +1,10 @@
 const works = [
-  { bg: "#c9a96a", caption: "Textured bob, grown-out nape" },
-  { bg: "#c4b49a", caption: "Curtain fringe, balayage grow-out" },
-  { bg: "#b8a081", caption: "Single process, deep espresso" },
-  { bg: "#ddd0bc", caption: "Full highlights, fine hair" },
-  { bg: "#d4c4a4", caption: "Lived-in balayage, warm ends" },
-  { bg: "#e4d8c4", caption: "Natural wave, dry cut" },
+  { bg: "#c9a96a", caption: "Textured bob, grown-out nape",         aspect: "4 / 5" },
+  { bg: "#c4b49a", caption: "Curtain fringe, balayage grow-out",    aspect: "3 / 4" },
+  { bg: "#b8a081", caption: "Single process, deep espresso",        aspect: "5 / 7" },
+  { bg: "#ddd0bc", caption: "Full highlights, fine hair",           aspect: "4 / 5" },
+  { bg: "#d4c4a4", caption: "Lived-in balayage, warm ends",         aspect: "3 / 4" },
+  { bg: "#e4d8c4", caption: "Natural wave, dry cut",                aspect: "5 / 6" },
 ];
 
 export default function RecentWork() {
@@ -17,21 +17,21 @@ export default function RecentWork() {
             Recent Work
           </p>
           <h2
-            className="font-serif font-light text-ink leading-none"
+            className="font-serif font-normal text-ink-true leading-none"
             style={{ fontSize: "clamp(2.6rem, 5vw, 3.8rem)" }}
           >
             From the chair.
           </h2>
         </div>
 
-        {/* 2×3 grid */}
+        {/* 2×3 grid — varied aspect ratios, gold hairline borders */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
           {works.map((work, i) => (
             <div key={i}>
               <div
-                className="w-full rounded-[2px] border border-ink/[0.05]"
+                className="w-full rounded-[2px] border border-gold/[0.35]"
                 style={{
-                  aspectRatio: "4 / 5",
+                  aspectRatio: work.aspect,
                   backgroundColor: work.bg,
                 }}
               />
