@@ -51,7 +51,7 @@ export default function Footer() {
             © 2025 Maren Studio · Lincoln Square, Chicago
           </p>
           <p className="font-sans text-[0.6rem] text-cream/20 italic">
-            made with care in chicago
+            Concept build for JBAR Design Studio. Not a real business.
           </p>
         </div>
       </div>
